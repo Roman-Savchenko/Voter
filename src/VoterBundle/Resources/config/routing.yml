@@ -1,0 +1,23 @@
+login:
+    path:     /login
+    defaults: { _controller: VoterBundle:Security:login }
+
+main:
+    path: /
+    defaults: {_controller: VoterBundle:Home:home }
+
+register:
+    path:   /register
+    defaults: { _controller: VoterBundle:Registration:register }
+
+voter_stop:
+    path:   /stop
+    defaults: { _controller: VoterBundle:Ajax:stop }
+
+voter_result:
+    path:   /result
+    defaults: { _controller: VoterBundle:Ajax:result }
+
+voter_form_submit:
+    path:   /result
+    defaults: { _controller: VoterBundle:Ajax:submit }

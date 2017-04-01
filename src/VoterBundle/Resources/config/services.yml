@@ -1,0 +1,22 @@
+services:
+ app.form.registration:
+        class:         VoterBundle\Form\Type\RegistrationType
+        tags:
+                      - { name: form.type, alias: app_user_registration }
+
+ form.voter:
+        class:   VoterBundle\Form\Type\VoterType
+        tags:
+                - { name: form.type, alias: form_voter }
+
+ voter.create:
+        class: VoterBundle\Form\Handler\HomeHandler
+        arguments: [@form.factory, @doctrine, @voter.manager ]
+        tags:
+            - {name: voter.create }
+
+ voter.manager:
+        class: VoterBundle\Managers\VoterManager
+        arguments: [@doctrine ]
+        tags:
+            - {name: voter.manager }

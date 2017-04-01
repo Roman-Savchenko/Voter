@@ -1,0 +1,37 @@
+security:
+  login:
+    username: Логин
+    password: Пароль
+    submit: Войти
+    hello: Пожалуйста авторизируйтесь в приложении !
+
+
+  registration:
+    submit: Регистрация
+    hello: Или зарегестрируйтесь
+    username: Имя пользователя
+    area: Площадь
+    owner: Владелец ли Вы
+    apartment: Ваша квартира
+    save: Сохранить
+    house: Номер дома
+    confirmed: Спасибо за регистрацию, для перехода на главную страницу нажмите на кнопку
+    back: Авторизоваться
+    voter: Проголосовать
+
+layout:
+    logged_in_as: Авторизирован как %username%
+
+form:
+  password: Пароль
+  password_confirmation: Подтвердите пароль
+  voter_message: Приймите участвие в голосовании
+  yes: За
+  no: Против
+  process: Остановить
+  result: Результат
+  result_voter: Спасибо Ваше мнение очень важно
+  result_error: Вы не можете принять участие в данном голосовании
+  stop_voter: Голосование закончено
+  result_not_valid_print: Результаты голосования не действительны
+  result_valid_print: Результаты голосования действительны

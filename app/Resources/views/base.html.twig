@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Bug Tracker System{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="{{ asset('bundles/voter/css/base.css') }}" rel="stylesheet" />
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block javascripts %}
+        <script src="{{ asset('bundles/voter/js/jquery-3.2.0.js') }}"></script>
+        <script src="{{ asset('bundles/voter/js/voter.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+
+<div class="main_content">
+    {% block main_content %}
+    {% endblock %}
+</div>
+<div>
+    {% block fos_user_content %}
+    {% endblock fos_user_content %}
+</div>
+</body>
+</html>

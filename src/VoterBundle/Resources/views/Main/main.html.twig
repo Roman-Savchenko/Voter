@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block javascripts %}
+   {{ parent() }}
+{% endblock %}
+{% block main_content %}
+    <div class="left">
+        <p>{{ 'form.voter_message'|trans }}</p>
+        <form class="form_action" action="{{ path('voter_form_submit') }}" method="post" {{ form_enctype(form) }}>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+            {{ form_end(form) }}
+        </form>
+    </div>
+    <div class="right">
+            <button id="voter" data-path="{{ url('voter_stop') }}">{{ 'form.process'|trans }}</button>
+        <span id="voter_stop" style="display: none"></span>
+    </div>
+    <div class="right">
+            <button id="result" data-path="{{ url('voter_result') }}">{{ 'form.result'|trans }}</button>
+    </div>
+    <div class="result" style="display: none">
+        <p></p>
+    </div>
+
+{% endblock %}

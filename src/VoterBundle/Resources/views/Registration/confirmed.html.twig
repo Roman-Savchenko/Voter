@@ -1,0 +1,6 @@
+{% extends "::base.html.twig" %}
+
+{% block fos_user_content %}
+    <p>{{ 'security.registration.confirmed'|trans}}</p>
+        <p><a href="{{ path("fos_user_security_login")  }}">{{ 'security.registration.back'|trans }}</a></p>
+{% endblock fos_user_content %}
