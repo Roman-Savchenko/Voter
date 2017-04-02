@@ -7,6 +7,7 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class RegistrationType extends AbstractType
 {
@@ -16,8 +17,8 @@ class RegistrationType extends AbstractType
             ->add('username','text', ['label' => 'security.registration.username'])
             ->add('area','text', ['label' => 'security.registration.area'])
             ->add('email','text')
-            ->add('owner','text', array(
-                'data' => 'Дa',
+            ->add('owner',CheckboxType::class, array(
+                'required' => false,
                 'label' => 'security.registration.owner'
             ))
             ->add('plainPassword', 'repeated', array(

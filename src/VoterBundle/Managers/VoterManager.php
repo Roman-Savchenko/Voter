@@ -81,7 +81,9 @@ class VoterManager {
             ->getRepository("VoterBundle:User")
             ->findBy(
                 [
-                  'house' => $user->getHouse()
+                    'house' => $user->getHouse(),
+                    'voter' => 1
+
                 ]
             );
         /** @var User $value */

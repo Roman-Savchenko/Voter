@@ -40,7 +40,7 @@ class User extends BaseUser
     /**
      * @ORM\Column(name="owner", type="smallint")
      */
-    protected $owner = 1;
+    protected $owner;
 
     /**
      * @ORM\Column(name="voter",  type="smallint")
@@ -66,7 +66,7 @@ class User extends BaseUser
     /**
      * @var float
      *
-     * @ORM\Column(name="percent", type="decimal", precision=12, scale=2)
+     * @ORM\Column(name="percent", type="decimal", precision=12, scale=2, nullable=true)
      */
     protected $percent;
 
